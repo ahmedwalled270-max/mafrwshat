@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ماشاءالله للمفروشات | الفخامة والتميز</title>
+    <style>
+        /* الديكور الفخم والألوان الملكية */
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #fafafa; /* لون أبيض حريري راقي جداً */
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            color: #1a1a1a;
+            padding-bottom: 90px; /* مساحة إضافية من تحت عشان الشريط الثابت ميعملش زحمة فوق الفوتر */
+        }
+
+        /* رأس الصفحة الأسود الملكي مع اللمسة الذهبية */
+        header {
+            background-color: #111111; /* أسود فاخر */
+            color: #ffffff;
+            padding: 60px 20px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 42px;
+            font-weight: 800;
+            color: #dfba73; /* ذهبي مطفي فخم */
+            letter-spacing: 2px;
+        }
+
+        header p {
+            margin: 15px 0 0 0;
+            font-size: 18px;
+            font-weight: 300;
+            color: #dddddd;
+            letter-spacing: 1px;
+        }
+
+        /* شريط متحرك فخم باللون الذهبي والكلام الأسود */
+        .marquee-bar {
+            background-color: #dfba73;
+            color: #111111;
+            padding: 8px 0;
+            font-size: 14px;
+            font-weight: bold;
+            overflow: hidden;
+            white-space: nowrap;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        /* بار التواصل الزجاجي الشيك */
+        .contact-section {
+            background-color: #ffffff;
+            padding: 30px 20px;
+            margin-bottom: 40px;
+            border-bottom: 1px solid #eaeaea;
+        }
+
+        /* زرار الواتساب الفخم المتطور */
+        .btn-luxury-whatsapp {
+            background: linear-gradient(135deg, #111111, #222222); /* أسود ملكي */
+            color: #dfba73; /* كتابة بالذهبي */
+            border: 2px solid #dfba73; /* إطار ذهبي */
+            padding: 16px 50px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 4px; /* حواف حادة راقية شبه الماركات الفخمة */
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.4s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            letter-spacing: 1px;
+        }
+
+        /* تأثير اللمعان والتحول للأخضر عند الوقوف بالماوس */
+        .btn-luxury-whatsapp:hover {
+            background: linear-gradient(135deg, #25D366, #1ebd54); /* يقلب أخضر واتساب بسلاسة */
+            color: white;
+            border-color: #25D366;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+        }
+
+        /* شبكة المعرض الاحترافية */
+        .gallery-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            padding: 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        /* كارت العرض ثلاثي الأبعاد الفخم */
+        .luxury-card {
+            background: #ffffff;
+            border-radius: 0px; /* ستايل مودرن مستقيم راقي جداً */
+            overflow: hidden;
+            width: 280px;
+            height: 360px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+            border: 1px solid #eeeeee;
+            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            position: relative;
+        }
+
+        /* الحركة السحرية الفخمة عند مرور الماوس */
+        .luxury-card:hover {
+            transform: translateY(-10px); /* يرتفع بسلاسة أعلى */
+            border-color: #dfba73; /* الإطار يقلب ذهبي خفيف */
+            box-shadow: 0 20px 40px rgba(223, 186, 115, 0.15); /* ضل ذهبي ناعم وراقي */
+        }
+
+        /* تصميم وحجم الصورة الفخم */
+        .luxury-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        /* زووم داخلي ناعم وبطيء للصورة */
+        .luxury-card:hover .luxury-image {
+            transform: scale(1.06);
+        }
+
+        /* الشريط المطور الثابت أسفل الشاشة (Floating Footer Bar) */
+        .fixed-bottom-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(17, 17, 17, 0.92); /* أسود زجاجي شفاف فاخر */
+            backdrop-filter: blur(10px); /* تأثير الضباب للزجاج */
+            -webkit-backdrop-filter: blur(10px);
+            padding: 15px 0;
+            box-shadow: 0 -5px 25px rgba(0,0,0,0.2);
+            z-index: 9999;
+            border-top: 2px solid #dfba73; /* خط ذهبي رفيع من فوق */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* زر الواتساب الانسيابي داخل الشريط الثابت */
+        .btn-fixed-whatsapp {
+            background: linear-gradient(135deg, #25D366, #1ebd54);
+            color: white;
+            padding: 12px 40px;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 30px; 
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .btn-fixed-whatsapp:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+        }
+
+        /* فوتر أسفل الصفحة باللون الأسود والذهبي */
+        footer {
+            background-color: #111111;
+            color: #ffffff;
+            padding: 40px 20px;
+            margin-top: 80px;
+            font-size: 14px;
+            border-top: 3px solid #dfba73;
+            letter-spacing: 1px;
+        }
+
+        .designer-credit {
+            font-size: 13px; 
+            margin-top: 12px; 
+            color: #dfba73; /* ذهبي فخم عشان ينور اسمك */
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>مَاشَاءَ الله لِلمَفْرُوشَات ✨</h1>
+        <p>عَالَم مِنَ الفَخَامَةِ وَالأَنَاقَةِ المَنْزِلِيَّة</p>
+    </header>
+
+    <div class="marquee-bar">
+        <marquee behavior="scroll" direction="right" scrollamount="6">
+            ✨ تشكيلة راقية من أرقى المفارش بأجود الخامات المصرية والعالمية .. تفضلوا بمشاهدة معرضنا الفاخر ✨
+        </marquee>
+    </div>
+
+    <div class="contact-section">
+        <a href="https://wa.me/201212486246?text=أهلاً%20ماشاءالله%20للمفروشات،%20شاهدت%20المعرض%20الفاخر%20وأريد%20الاستفسار%20عن%20المفارش" target="_blank" class="btn-luxury-whatsapp">
+            تواصل معنا لطلب التميز عبر الواتساب 💬
+        </a>
+    </div>
+
+    <div class="gallery-container">
+        
+        <div class="luxury-card"><img src="photo1.jpeg" alt="مفرش فاخر" class="luxury-image"></div>
+        <div class="luxury-card"><img src="photo2.jpeg" alt="مفرش فاخر" class="luxury-image"></div>
+        <div class="luxury-card"><img src="photo3.jpeg" alt="مفرش فاخر" class="luxury-image"></div>
+        <div class="luxury-card"><img src="photo4.jpeg" alt="مفرش فاخر" class="luxury-image"></div>
+        <div class="luxury-card"><img src="photo5.jpeg" alt="مفرش فاخر" class="luxury-image"></div>
+        <div class="luxury-card"><img src="photo6.jpeg" alt="مفرش فاخر" class="luxury-image"></div>
+        <div class="luxury-card"><img src="photo7.jpeg" alt="مفرش فاخر" class="luxury-image"></div>
+        <div class="luxury-card"><img src="photo8.jpeg" alt="مفرش فاخر" class="luxury-image"></div>
+        <div class="luxury-card"><img src="photo9.jpeg" alt="مفرش فاخر" class="luxury-image"></div>
+        <div class="luxury-card"><img src="photo10.jpeg" alt="مفرش فاخر" class="luxury-image"></div>
+        <div class="luxury-card"><img src="photo11.jpeg" alt="مفرش فاخر" class="luxury-image"></div>
+        <div class="luxury-card"><img src="photo12.jpeg" alt="مفرش فاخر" class="luxury-image"></div>
+        <div class="luxury-card"><img src="photo13.jpeg" alt="مفرش فاخر" class="luxury-image"></div>
+        <div class="luxury-card"><img src="photo14.jpeg" alt="مفرش فاخر" class="luxury-image"></div>
+        <div class="luxury-card"><img src="photo15.jpeg" alt="مفرش فاخر" class="luxury-image"></div>
+        <div class="luxury-card"><img src="photo16.jpeg" alt="مفرش فاخر" class="luxury-image"></div>
+        <div class="luxury-card"><img src="photo17.jpeg" alt="مفرش فاخر" class="luxury-image"></div>
+        <div class="luxury-card"><img src="photo18.jpeg" alt="مفرش فاخر" class="luxury-image"></div>
+        <div class="luxury-card"><img src="photo19.jpeg" alt="مفرش فاخر" class="luxury-image"></div>
+        <div class="luxury-card"><img src="photo20.jpeg" alt="مفرش فاخر" class="luxury-image"></div>
+
+    </div>
+
+    <div style="margin-top: 50px;">
+        <a href="https://wa.me/201212486246?text=أهلاً%20ماشاءالله%20للمفروشات،%20شاهدت%20المعرض%20الفاخر%20وأريد%20الاستفسار%20عن%20المفارش" target="_blank" class="btn-luxury-whatsapp">
+            تواصل معنا واطلب الآن عبر واتساب 💬
+        </a>
+    </div>
+
+    <div class="fixed-bottom-bar">
+        <a href="https://wa.me/201212486246?text=أهلاً%20ماشاءالله%20للمفروشات،%20شاهدت%20المعرض%20الفاخر%20وأريد%20الاستفسار%20عن%20المفارش" target="_blank" class="btn-fixed-whatsapp">
+            اضغط هنا للطلب السريع عبر واتساب 💬
+        </a>
+    </div>
+
+    <footer>
+        <p>جميع الحقوق محفوظة © ٢٠٢٦ مَاشَاءَ الله لِلمَفْرُوشَات</p>
+        <p class="designer-credit">صُنِع بِكُل حُب لأمي الغالية ❤️ | تصميم وتطوير: Ahmed Waleed Sophy ✨</p>
+    </footer>
+
+</body>
+</html>
